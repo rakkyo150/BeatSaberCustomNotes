@@ -13,8 +13,11 @@
     
         <slider-setting id='size-slider' text='Note Scale' min='0.4' max='2' increment='0.05' value='note-size' apply-on-change='true' hover-hint='Changes the scale of custom notes. Requires a non-default note to be used.'/>
         <checkbox-setting id='hmd-checkbox' text='HMD Only' value='hmd-only' apply-on-change='true' hover-hint='Only displays custom notes in the headset. A non-default camera such as Smooth Camera, Camera+, or Camera2 is required.'/>
-        
-      </vertical>
+		<checkbox-setting id='note-trail-checkbox' text='Note Trail' value='note-trail' apply-on-change='true'/>
+		  <increment-setting id='note-trail-width' text ='Note Trail Width' min='0.01' max='0.1' increment='0.01' value='trail-width' apply-on-change='true'/>
+		  <increment-setting id='note-trail-time' text ='Note Trail Time' min='0.01' max='0.5' increment='0.01' value='trail-time' apply-on-change='true'/>
+      
+	  </vertical>
     </horizontal>
   </tab>
 </bg>

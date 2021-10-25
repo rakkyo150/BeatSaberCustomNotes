@@ -38,6 +38,14 @@ namespace CustomNotes.Settings.UI
         [UIComponent("hmd-checkbox")]
         private ToggleSetting hmdCheckbox = null;
 
+        [UIComponent("note-trail-checkbox")]
+        private ToggleSetting noteTrailCheckbox = null;
+
+        [UIComponent("note-trail-width")]
+        private IncrementSetting noteTrailWidth = null;
+
+        [UIComponent("note-trail-time")]
+        private IncrementSetting noteTrailTime = null;
 
         public NoteModifierViewController(PluginConfig pluginConfig, NoteAssetLoader noteAssetLoader)
         {
@@ -65,6 +73,9 @@ namespace CustomNotes.Settings.UI
             notesDropdown.ReceiveValue();
             sizeSlider.ReceiveValue();
             hmdCheckbox.ReceiveValue();
+            noteTrailCheckbox.ReceiveValue();
+            noteTrailWidth.ReceiveValue();
+            noteTrailTime.ReceiveValue();
         }
 
         internal void ParentControllerDeactivated() // This is for fixing a weird bug with the dropdownlist
@@ -125,6 +136,24 @@ namespace CustomNotes.Settings.UI
             {
                 _pluginConfig.HMDOnly = value;
             }
+        }
+        [UIValue("note-trail")]
+        public bool noteTrail
+        {
+            get { return _pluginConfig.NoteTrail; }
+            set { _pluginConfig.NoteTrail = value; }
+        }
+        [UIValue("trail-width")]
+        public float trailWidth
+        {
+            get { return _pluginConfig.TrailWidth; }
+            set { _pluginConfig.TrailWidth = value; }
+        }
+        [UIValue("trail-time")]
+        public float trailTime
+        {
+            get { return _pluginConfig.TrailTime; }
+            set { _pluginConfig.TrailTime = value; }
         }
     }
 }

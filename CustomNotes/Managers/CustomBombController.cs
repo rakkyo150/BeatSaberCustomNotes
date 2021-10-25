@@ -42,6 +42,7 @@ namespace CustomNotes.Managers
             }
             
             bombMesh = gameObject.transform.Find("Mesh");
+            Logger.log.Debug(this.gameObject.ToString());
             MeshRenderer bm = GetComponentInChildren<MeshRenderer>();
 
             if (_pluginConfig.HMDOnly || LayerUtils.HMDOverride)

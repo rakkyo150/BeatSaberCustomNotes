@@ -5,6 +5,7 @@ using SiraUtil.Objects;
 using SiraUtil.Interfaces;
 using CustomNotes.Managers;
 using CustomNotes.Utilities;
+using CustomNotes.Settings.Utilities;
 
 namespace CustomNotes.Providers
 {
@@ -13,13 +14,15 @@ namespace CustomNotes.Providers
         public Type Type => typeof(CustomGameNoteDecorator);
         public int Priority { get; set; } = 300;
 
-        private class CustomGameNoteDecorator : IPrefabProvider<GameNoteController>
+        internal class CustomGameNoteDecorator : IPrefabProvider<GameNoteController>
         {
+            PluginConfig _pluginConfig;
+
             public bool Chain => true;
             public bool CanSetup { get; private set; }
 
             [Inject]
-            public void Construct(NoteAssetLoader _noteAssetLoader, DiContainer Container, GameplayCoreSceneSetupData sceneSetupData)
+            public void Construct(NoteAssetLoader _noteAssetLoader, DiContainer Container, GameplayCoreSceneSetupData sceneSetupData,PluginConfig pluginConfig)
             {
                 CanSetup = !(sceneSetupData.gameplayModifiers.ghostNotes || sceneSetupData.gameplayModifiers.disappearingArrows) || !Container.HasBinding<MultiplayerLevelSceneSetupData>();
                 if (_noteAssetLoader.SelectedNote != 0)
@@ -45,12 +48,31 @@ namespace CustomNotes.Providers
                         Container.BindMemoryPool<SiraPrefabContainer, SiraPrefabContainer.Pool>().WithId("cn.right.dot").WithInitialSize(10).FromComponentInNewPrefab(NotePrefabContainer(note.NoteDotRight));
                     }
                 }
+                _pluginConfig = pluginConfig;
             }
 
             public GameNoteController Modify(GameNoteController original)
             {
+
                 if (!CanSetup) return original;
                 original.gameObject.AddComponent<CustomNoteController>();
+
+                if (_pluginConfig.NoteTrail)
+                {
+                    original.gameObject.AddComponent<TrailRenderer>();
+                    TrailRenderer tr = original.gameObject.GetComponent<TrailRenderer>();
+                    Material mt = new Material(Shader.Find("Legacy Shaders/Diffuse"));
+                    if (mt != null)
+                    {
+                        mt.color = Color.blue;
+                        tr.material = mt;
+                    }
+                    tr.time = _pluginConfig.TrailTime;
+                    tr.widthMultiplier = _pluginConfig.TrailWidth;
+                    Logger.log.Debug("add trail");
+
+                }
+                
                 return original;
             }
 
