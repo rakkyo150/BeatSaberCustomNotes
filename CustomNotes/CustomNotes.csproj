@@ -160,6 +160,7 @@
     <Compile Include="Overrides\CustomNoteColorNoteVisuals.cs" />
     <Compile Include="Providers\CustomBombNoteProvider.cs" />
     <Compile Include="Providers\CustomGameNoteProvider.cs" />
+    <Compile Include="Managers\NoteTrailController.cs" />
     <Compile Include="Settings\UI\NoteDetailsViewController.cs" />
     <Compile Include="Settings\UI\NoteModifierViewController.cs" />
     <Compile Include="Settings\UI\NotePreviewViewController.cs" />
@@ -206,6 +207,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetPath)" "$(BeatSaberDir)\Plugins"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Plugins"</PostBuildEvent>
   </PropertyGroup>
 </Project>

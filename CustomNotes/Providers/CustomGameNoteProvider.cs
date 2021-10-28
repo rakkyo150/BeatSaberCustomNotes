@@ -6,6 +6,8 @@ using SiraUtil.Interfaces;
 using CustomNotes.Managers;
 using CustomNotes.Utilities;
 using CustomNotes.Settings.Utilities;
+using BS_Utils.Gameplay;
+using System.Collections.Generic;
 
 namespace CustomNotes.Providers
 {
@@ -22,7 +24,7 @@ namespace CustomNotes.Providers
             public bool CanSetup { get; private set; }
 
             [Inject]
-            public void Construct(NoteAssetLoader _noteAssetLoader, DiContainer Container, GameplayCoreSceneSetupData sceneSetupData,PluginConfig pluginConfig)
+            public void Construct(NoteAssetLoader _noteAssetLoader, DiContainer Container, GameplayCoreSceneSetupData sceneSetupData,PluginConfig pluginConfig )
             {
                 CanSetup = !(sceneSetupData.gameplayModifiers.ghostNotes || sceneSetupData.gameplayModifiers.disappearingArrows) || !Container.HasBinding<MultiplayerLevelSceneSetupData>();
                 if (_noteAssetLoader.SelectedNote != 0)
@@ -59,18 +61,14 @@ namespace CustomNotes.Providers
 
                 if (_pluginConfig.NoteTrail)
                 {
-                    original.gameObject.AddComponent<TrailRenderer>();
-                    TrailRenderer tr = original.gameObject.GetComponent<TrailRenderer>();
-                    Material mt = new Material(Shader.Find("Legacy Shaders/Diffuse"));
-                    if (mt != null)
-                    {
-                        mt.color = Color.blue;
-                        tr.material = mt;
-                    }
-                    tr.time = _pluginConfig.TrailTime;
-                    tr.widthMultiplier = _pluginConfig.TrailWidth;
-                    Logger.log.Debug("add trail");
+                    original.gameObject.AddComponent<NoteTrailController>();
+                }
 
+                Logger.log.Debug(original.ToString());
+                Logger.log.Debug(original.gameObject.ToString());
+                if (original.gameObject.TryGetComponent<NoteTrailController>(out NoteTrailController a))
+                {
+                    Logger.log.Debug("NoteTrailControllerあり");
                 }
                 
                 return original;

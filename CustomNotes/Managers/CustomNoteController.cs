@@ -197,6 +197,7 @@ namespace CustomNotes.Managers
 
         public void HandleNoteControllerNoteWasCut(NoteController nc, in NoteCutInfo _)
         {
+            Logger.log.Debug("cut");
             HandleNoteControllerNoteWasMissed(nc);
         }
 

@@ -15,7 +15,7 @@
         <checkbox-setting id='hmd-checkbox' text='HMD Only' value='hmd-only' apply-on-change='true' hover-hint='Only displays custom notes in the headset. A non-default camera such as Smooth Camera, Camera+, or Camera2 is required.'/>
 		<checkbox-setting id='note-trail-checkbox' text='Note Trail' value='note-trail' apply-on-change='true'/>
 		  <increment-setting id='note-trail-width' text ='Note Trail Width' min='0.01' max='0.1' increment='0.01' value='trail-width' apply-on-change='true'/>
-		  <increment-setting id='note-trail-time' text ='Note Trail Time' min='0.01' max='0.5' increment='0.01' value='trail-time' apply-on-change='true'/>
+		  <increment-setting id='note-trail-length' text ='Note Trail Length' min='0.1' max='30' increment='0.1' value='trail-time' apply-on-change='true'/>
       
 	  </vertical>
     </horizontal>

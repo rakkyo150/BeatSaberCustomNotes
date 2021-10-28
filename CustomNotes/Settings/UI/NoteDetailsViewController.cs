@@ -32,8 +32,8 @@ namespace CustomNotes.Settings
         [UIComponent("note-trail-width")]
         private IncrementSetting noteTrailWidth = null;
 
-        [UIComponent("note-trail-time")]
-        private IncrementSetting noteTrailTime = null;
+        [UIComponent("note-trail-length")]
+        private IncrementSetting noteTrailLength = null;
 
         public void OnNoteWasChanged(CustomNote customNote)
         {
@@ -62,9 +62,9 @@ namespace CustomNotes.Settings
             {
                 noteTrailWidth.ReceiveValue();
             }
-            if (noteTrailTime != null)
+            if (noteTrailLength != null)
             {
-                noteTrailTime.ReceiveValue();
+                noteTrailLength.ReceiveValue();
             }
         }
 
@@ -105,11 +105,11 @@ namespace CustomNotes.Settings
             get { return _pluginConfig.TrailWidth; }
             set { _pluginConfig.TrailWidth = value; }
         }
-        [UIValue("trail-time")]
+        [UIValue("trail-length")]
         public float trailTime
         {
-            get { return _pluginConfig.TrailTime; }
-            set { _pluginConfig.TrailTime = value; }
+            get { return _pluginConfig.TrailLength; }
+            set { _pluginConfig.TrailLength = value; }
         }
     }
 }

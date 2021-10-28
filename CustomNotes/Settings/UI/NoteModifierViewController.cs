@@ -44,8 +44,8 @@ namespace CustomNotes.Settings.UI
         [UIComponent("note-trail-width")]
         private IncrementSetting noteTrailWidth = null;
 
-        [UIComponent("note-trail-time")]
-        private IncrementSetting noteTrailTime = null;
+        [UIComponent("note-trail-length")]
+        private IncrementSetting noteTrailLength = null;
 
         public NoteModifierViewController(PluginConfig pluginConfig, NoteAssetLoader noteAssetLoader)
         {
@@ -75,7 +75,7 @@ namespace CustomNotes.Settings.UI
             hmdCheckbox.ReceiveValue();
             noteTrailCheckbox.ReceiveValue();
             noteTrailWidth.ReceiveValue();
-            noteTrailTime.ReceiveValue();
+            noteTrailLength.ReceiveValue();
         }
 
         internal void ParentControllerDeactivated() // This is for fixing a weird bug with the dropdownlist
@@ -149,11 +149,11 @@ namespace CustomNotes.Settings.UI
             get { return _pluginConfig.TrailWidth; }
             set { _pluginConfig.TrailWidth = value; }
         }
-        [UIValue("trail-time")]
+        [UIValue("trail-length")]
         public float trailTime
         {
-            get { return _pluginConfig.TrailTime; }
-            set { _pluginConfig.TrailTime = value; }
+            get { return _pluginConfig.TrailLength; }
+            set { _pluginConfig.TrailLength = value; }
         }
     }
 }
