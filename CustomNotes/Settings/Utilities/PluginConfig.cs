@@ -8,7 +8,8 @@
 
         public virtual bool HMDOnly { get; set; } = false;
         public virtual bool NoteTrail { get; set; } = true;
-        public virtual float TrailWidth { get; set; } = 0.05f;
-        public virtual float TrailLength { get; set; } = 10f;
+        public virtual bool ColoredTrail { get; set; } = true;
+        public virtual float TrailWidth { get; set; } = 0.03f;
+        public virtual float TrailLength { get; set; } = 3.5f;
     }
 }

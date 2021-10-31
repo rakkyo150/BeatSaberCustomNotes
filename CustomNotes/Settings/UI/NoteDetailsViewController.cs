@@ -29,6 +29,9 @@ namespace CustomNotes.Settings
         [UIComponent("note-trail-checkbox")]
         private ToggleSetting noteTrailCheckbox = null;
 
+        [UIComponent("colored-note-trail-checkbox")]
+        private ToggleSetting coloredNoteTrailCheckbox = null;
+
         [UIComponent("note-trail-width")]
         private IncrementSetting noteTrailWidth = null;
 
@@ -57,6 +60,10 @@ namespace CustomNotes.Settings
             if (noteTrailCheckbox != null)
             {
                 noteTrailCheckbox.ReceiveValue();
+            }
+            if (coloredNoteTrailCheckbox != null)
+            {
+                coloredNoteTrailCheckbox.ReceiveValue();
             }
             if (noteTrailWidth != null)
             {
@@ -98,6 +105,12 @@ namespace CustomNotes.Settings
         {
             get { return _pluginConfig.NoteTrail; }
             set { _pluginConfig.NoteTrail = value; }
+        }
+        [UIValue("colored-trail")]
+        public bool coloredTrail
+        {
+            get { return _pluginConfig.ColoredTrail; }
+            set { _pluginConfig.ColoredTrail = value; }
         }
         [UIValue("trail-width")]
         public float trailWidth

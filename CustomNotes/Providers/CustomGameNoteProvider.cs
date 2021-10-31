@@ -66,11 +66,7 @@ namespace CustomNotes.Providers
 
                 Logger.log.Debug(original.ToString());
                 Logger.log.Debug(original.gameObject.ToString());
-                if (original.gameObject.TryGetComponent<NoteTrailController>(out NoteTrailController a))
-                {
-                    Logger.log.Debug("NoteTrailControllerあり");
-                }
-                
+
                 return original;
             }
 
