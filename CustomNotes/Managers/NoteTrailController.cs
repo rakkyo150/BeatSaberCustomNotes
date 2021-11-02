@@ -119,6 +119,8 @@ namespace CustomNotes.Managers
             // ResourcesにはシェーダそのものではなくUnityでAssetBundle化したものが必要
             Stream st=asm.GetManifestResourceStream("CustomNotes.Resources.Shaders.sh_custom_unlit");
 
+           
+
             AssetBundle assetBundle = AssetBundle.LoadFromStream(st);
             this.shader = assetBundle.LoadAsset<Shader>("sh_custom_unlit");
             assetBundle.Unload(false);
