@@ -2,21 +2,21 @@
 
 # BeatSaberCustomNotes + NoteTrail
 
-ƒJƒXƒ^ƒ€ƒm[ƒc‚Éƒm[ƒcƒgƒŒƒCƒ‹‹@”\‚ð•t—^‚µ‚½MODB<br>
-ƒJƒXƒ^ƒ€ƒm[ƒc‚ÌREADME‚Í[‚±‚¿‚ç](README_original)‚©‚çB<br>
-‚È‚¨A¡Œãƒm[ƒcƒgƒŒƒCƒ‹‚ÍƒJƒXƒ^ƒ€ƒm[ƒc‚©‚ç•ª—£‚³‚¹‚é‰Â”\«‚ª‚ ‚è‚Ü‚·B
+ã‚«ã‚¹ã‚¿ãƒ ãƒŽãƒ¼ãƒ„ã«ãƒŽãƒ¼ãƒ„ãƒˆãƒ¬ã‚¤ãƒ«æ©Ÿèƒ½ã‚’ä»˜ä¸Žã—ãŸMODã€‚<br>
+ã‚«ã‚¹ã‚¿ãƒ ãƒŽãƒ¼ãƒ„ã®READMEã¯[ã“ã¡ã‚‰](README_original)ã‹ã‚‰ã€‚<br>
+ãªãŠã€ä»Šå¾ŒãƒŽãƒ¼ãƒ„ãƒˆãƒ¬ã‚¤ãƒ«ã‚’ã‚«ã‚¹ã‚¿ãƒ ãƒŽãƒ¼ãƒ„ã‹ã‚‰åˆ†é›¢ã•ã›ã‚‹å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™ã€‚
 
-# ’Ç‰Á‚³‚ê‚½Ý’è€–Ú
+# è¿½åŠ ã•ã‚ŒãŸè¨­å®šé …ç›®
 
-|Ý’è€–Ú|“à—e|
+|è¨­å®šé …ç›®|å†…å®¹|
 |:---|:---|
-|NoteTrail|ƒm[ƒcƒgƒŒƒCƒ‹‹@”\‚Ì—LŒø–³Œø‚ÌÝ’è|
-|ColoredTrail|ƒgƒŒƒCƒ‹‚Éƒm[ƒc‚ÌF‚ð•t—^‚·‚é‚©‚Ç‚¤‚©‚ÌÝ’è|
-|TrailWidth|ƒgƒŒƒCƒ‹‚Ì‘¾‚³‚ÌÝ’è|
-|TrailLength|ƒgƒŒƒCƒ‹‚Ì’·‚³‚ÌÝ’è|
+|NoteTrail|ãƒŽãƒ¼ãƒ„ãƒˆãƒ¬ã‚¤ãƒ«æ©Ÿèƒ½ã®æœ‰åŠ¹ç„¡åŠ¹ã®è¨­å®š|
+|ColoredTrail|ãƒˆãƒ¬ã‚¤ãƒ«ã«ãƒŽãƒ¼ãƒ„ã®è‰²ã‚’ä»˜ä¸Žã™ã‚‹ã‹ã©ã†ã‹ã®è¨­å®š|
+|TrailWidth|ãƒˆãƒ¬ã‚¤ãƒ«ã®å¤ªã•ã®è¨­å®š|
+|TrailLength|ãƒˆãƒ¬ã‚¤ãƒ«ã®é•·ã•ã®è¨­å®š|
 
-# ¡ŒãŽÀ‘•‚·‚é‚©‚à‚µ‚ê‚È‚¢‹@”\
+# ä»Šå¾Œå®Ÿè£…ã™ã‚‹ã‹ã‚‚ã—ã‚Œãªã„æ©Ÿèƒ½
 
-- ƒVƒF[ƒ_[‚Ì‘I‘ð‚ð‰Â”\‚É‚·‚é
-- ƒJƒXƒ^ƒ€ƒm[ƒc‚©‚çƒm[ƒcƒgƒŒƒCƒ‹‚ð•ª—£‚·‚é
+- ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã®é¸æŠžã‚’å¯èƒ½ã«ã™ã‚‹
+- ã‚«ã‚¹ã‚¿ãƒ ãƒŽãƒ¼ãƒ„ã‹ã‚‰ãƒŽãƒ¼ãƒ„ãƒˆãƒ¬ã‚¤ãƒ«ã‚’åˆ†é›¢ã™ã‚‹
 
