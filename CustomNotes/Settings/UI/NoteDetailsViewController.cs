@@ -119,7 +119,7 @@ namespace CustomNotes.Settings
             set { _pluginConfig.TrailWidth = value; }
         }
         [UIValue("trail-length")]
-        public float trailTime
+        public float trailLength
         {
             get { return _pluginConfig.TrailLength; }
             set { _pluginConfig.TrailLength = value; }

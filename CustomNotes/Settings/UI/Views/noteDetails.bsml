@@ -16,7 +16,7 @@
 		<checkbox-setting id='note-trail-checkbox' text='Note Trail' value='note-trail' apply-on-change='true'/>
 		  <checkbox-setting id='colored-note-trail-checkbox' text='Colored Trail' value='colored-trail' apply-on-change='true'/>
 		  <increment-setting id='note-trail-width' text ='Note Trail Width' min='0.01' max='0.1' increment='0.01' value='trail-width' apply-on-change='true'/>
-		  <increment-setting id='note-trail-length' text ='Note Trail Length' min='0.1' max='30' increment='0.1' value='trail-time' apply-on-change='true'/>
+		  <increment-setting id='note-trail-length' text ='Note Trail Length' min='0.1' max='30' increment='0.1' value='trail-length' apply-on-change='true'/>
       
 	  </vertical>
     </horizontal>
