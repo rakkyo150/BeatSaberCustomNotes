@@ -1,12 +1,12 @@
 ﻿using System;
-using Zenject;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using CustomNotes.Data;
 using CustomNotes.Providers;
-using CustomNotes.Utilities;
-using System.Collections.Generic;
 using CustomNotes.Settings.Utilities;
+using CustomNotes.Utilities;
+using Zenject;
 
 namespace CustomNotes.Managers
 {

@@ -1,9 +1,9 @@
-﻿using Zenject;
-using SiraUtil.Interfaces;
-using CustomNotes.Managers;
+﻿using CustomNotes.Managers;
 using CustomNotes.Providers;
 using CustomNotes.Settings.Utilities;
 using CustomNotes.Utilities;
+using SiraUtil.Interfaces;
+using Zenject;
 
 namespace CustomNotes.Installers
 {

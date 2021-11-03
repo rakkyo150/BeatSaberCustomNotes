@@ -1,6 +1,6 @@
-﻿using CustomNotes.Utilities;
-using System;
+﻿using System;
 using System.IO;
+using CustomNotes.Utilities;
 using UnityEngine;
 
 namespace CustomNotes.Data

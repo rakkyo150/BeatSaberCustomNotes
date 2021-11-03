@@ -1,9 +1,9 @@
-﻿using Zenject;
-using UnityEngine;
-using CustomNotes.Data;
+﻿using CustomNotes.Data;
 using CustomNotes.Settings.Utilities;
 using CustomNotes.Utilities;
 using SiraUtil.Objects;
+using UnityEngine;
+using Zenject;
 
 namespace CustomNotes.Managers
 {
@@ -40,13 +40,13 @@ namespace CustomNotes.Managers
                 _bombNoteController.noteWasMissedEvent.Add(this);
                 _bombNoteController.noteDidDissolveEvent.Add(this);
             }
-            
+
             bombMesh = gameObject.transform.Find("Mesh");
             MeshRenderer bm = GetComponentInChildren<MeshRenderer>();
 
             if (_pluginConfig.HMDOnly || LayerUtils.HMDOverride)
             {
-                if(bombPool == null)
+                if (bombPool == null)
                 {
                     // create fake bombs for Custom Notes without Custom Bombs
                     fakeFirstPersonBombMesh = Instantiate(bombMesh.gameObject);
@@ -58,7 +58,7 @@ namespace CustomNotes.Managers
                     fakeFirstPersonBombMesh.transform.rotation = Quaternion.identity;
                     fakeFirstPersonBombMesh.layer = (int)LayerUtils.NoteLayer.FirstPerson;
                 }
-                
+
             }
             else if (bombPool != null)
             {

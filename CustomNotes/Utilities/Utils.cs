@@ -1,12 +1,11 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using UnityEngine;
 using System.Reflection;
-using System.Collections.Generic;
+using CustomNotes.Settings.Utilities;
 using IPA.Loader;
 using IPA.Utilities;
-using System;
-using CustomNotes.Settings.Utilities;
+using UnityEngine;
 
 namespace CustomNotes.Utilities
 {

@@ -1,14 +1,13 @@
-﻿using IPA;
-using System.IO;
-using IPA.Config;
-using IPA.Utilities;
-using SiraUtil.Zenject;
-using IPA.Config.Stores;
+﻿using System.IO;
 using CustomNotes.HarmonyPatches;
 using CustomNotes.Installers;
 using CustomNotes.Settings.Utilities;
+using IPA;
+using IPA.Config;
+using IPA.Config.Stores;
+using IPA.Utilities;
+using SiraUtil.Zenject;
 using IPALogger = IPA.Logging.Logger;
-using System;
 
 namespace CustomNotes
 {

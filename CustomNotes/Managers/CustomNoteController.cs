@@ -1,11 +1,11 @@
-﻿using Zenject;
-using UnityEngine;
-using SiraUtil.Objects;
-using CustomNotes.Data;
-using SiraUtil.Interfaces;
+﻿using CustomNotes.Data;
 using CustomNotes.Overrides;
 using CustomNotes.Settings.Utilities;
 using CustomNotes.Utilities;
+using SiraUtil.Interfaces;
+using SiraUtil.Objects;
+using UnityEngine;
+using Zenject;
 
 namespace CustomNotes.Managers
 {
@@ -65,7 +65,7 @@ namespace CustomNotes.Managers
             }
             else
             {
-                noteMesh.gameObject.layer = (int) LayerUtils.NoteLayer.ThirdPerson;
+                noteMesh.gameObject.layer = (int)LayerUtils.NoteLayer.ThirdPerson;
             }
         }
 
@@ -134,7 +134,7 @@ namespace CustomNotes.Managers
         {
             SetActiveThenColor(activeNote, (visuals as CustomNoteColorNoteVisuals).noteColor);
             // Hide certain parts of the default note which is not required
-            if(_pluginConfig.HMDOnly == false && LayerUtils.HMDOverride == false)
+            if (_pluginConfig.HMDOnly == false && LayerUtils.HMDOverride == false)
             {
                 _customNoteColorNoteVisuals.SetBaseGameVisualsLayer((int)LayerUtils.NoteLayer.Note);
                 if (_customNote.Descriptor.DisableBaseNoteArrows)

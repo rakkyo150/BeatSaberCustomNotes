@@ -1,11 +1,8 @@
-﻿using Zenject;
-using CustomNotes.Data;
-using SiraUtil.Services;
-using CustomNotes.Utilities;
-using System;
+﻿using CustomNotes.Data;
 using CustomNotes.Settings.Utilities;
-using IPA.Loader;
-using System.Linq;
+using CustomNotes.Utilities;
+using SiraUtil.Services;
+using Zenject;
 
 namespace CustomNotes.Managers
 {

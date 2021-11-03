@@ -1,12 +1,12 @@
-﻿using HMUI;
-using CustomNotes.Data;
-using CustomNotes.Utilities;
-using CustomNotes.Settings.Utilities;
-using BeatSaberMarkupLanguage.Attributes;
-using BeatSaberMarkupLanguage.ViewControllers;
-using Zenject;
-using CustomNotes.Settings.UI;
+﻿using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.Components.Settings;
+using BeatSaberMarkupLanguage.ViewControllers;
+using CustomNotes.Data;
+using CustomNotes.Settings.UI;
+using CustomNotes.Settings.Utilities;
+using CustomNotes.Utilities;
+using HMUI;
+using Zenject;
 
 namespace CustomNotes.Settings
 {
@@ -86,18 +86,18 @@ namespace CustomNotes.Settings
         public float noteSize
         {
             get { return _pluginConfig.NoteSize; }
-            set 
-            { 
+            set
+            {
                 _pluginConfig.NoteSize = value;
                 _listViewController.ScalePreviewNotes(value);
             }
         }
 
         [UIValue("hmd-only")]
-        public bool hmdOnly 
+        public bool hmdOnly
         {
             get { return _pluginConfig.HMDOnly; }
-            set 
+            set
             { _pluginConfig.HMDOnly = value; }
         }
         [UIValue("note-trail")]

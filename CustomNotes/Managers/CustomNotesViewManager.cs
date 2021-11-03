@@ -1,5 +1,5 @@
-﻿using CustomNotes.Settings.UI;
-using System;
+﻿using System;
+using CustomNotes.Settings.UI;
 using Zenject;
 
 namespace CustomNotes.Managers
@@ -21,7 +21,7 @@ namespace CustomNotes.Managers
         {
             _noteListViewController.customNotesReloaded += NoteListViewController_CustomNotesReloaded;
             _gameplaySetupViewController.didActivateEvent += GameplaySetupViewController_DidActivateEvent;
-            _gameplaySetupViewController.didDeactivateEvent += GameplaySetupViewController_DidDeactivateEvent; 
+            _gameplaySetupViewController.didDeactivateEvent += GameplaySetupViewController_DidDeactivateEvent;
         }
 
         public void Dispose()

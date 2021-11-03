@@ -1,14 +1,14 @@
-﻿using BeatSaberMarkupLanguage.Attributes;
-using Zenject;
-using CustomNotes.Settings.Utilities;
-using CustomNotes.Managers;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using BeatSaberMarkupLanguage.Attributes;
+using BeatSaberMarkupLanguage.Components.Settings;
 using BeatSaberMarkupLanguage.GameplaySetup;
 using CustomNotes.Data;
-using System.Collections.Generic;
-using BeatSaberMarkupLanguage.Components.Settings;
-using System.Linq;
+using CustomNotes.Managers;
+using CustomNotes.Settings.Utilities;
 using UnityEngine;
+using Zenject;
 
 namespace CustomNotes.Settings.UI
 {
@@ -112,7 +112,7 @@ namespace CustomNotes.Settings.UI
         [UIValue("selected-note")]
         private string selectedNote
         {
-            get 
+            get
             {
                 if (_noteAssetLoader.CustomNoteObjects[_noteAssetLoader.SelectedNote].ErrorMessage != null) // Only select if valid bloq is loaded
                 {

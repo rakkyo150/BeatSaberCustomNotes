@@ -1,17 +1,17 @@
-﻿using HMUI;
-using System;
+﻿using System;
 using System.Collections;
-using Zenject;
-using UnityEngine;
-using UnityEngine.UI;
-using CustomNotes.Data;
-using CustomNotes.Managers;
-using CustomNotes.Utilities;
-using CustomNotes.Settings.Utilities;
 using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.Components;
 using BeatSaberMarkupLanguage.ViewControllers;
+using CustomNotes.Data;
+using CustomNotes.Managers;
+using CustomNotes.Settings.Utilities;
+using CustomNotes.Utilities;
+using HMUI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+using Zenject;
 
 namespace CustomNotes.Settings.UI
 {
@@ -138,7 +138,7 @@ namespace CustomNotes.Settings.UI
             customListTableData.tableView.ReloadData();
             int selectedNote = _noteAssetLoader.SelectedNote;
 
-            customListTableData.tableView.ScrollToCellWithIdx(selectedNote, TableView.ScrollPositionType.Beginning, false) ;
+            customListTableData.tableView.ScrollToCellWithIdx(selectedNote, TableView.ScrollPositionType.Beginning, false);
             customListTableData.tableView.SelectCellWithIdx(selectedNote);
         }
 
@@ -304,12 +304,12 @@ namespace CustomNotes.Settings.UI
                 gameObject = null;
             }
         }
-        
+
         private void ScalePreviewNote(GameObject note, float scale)
         {
             if (note)
             {
-                note.transform.localScale = new Vector3(1,1,1) * scale;
+                note.transform.localScale = new Vector3(1, 1, 1) * scale;
             }
         }
         public void ScalePreviewNotes(float scale)

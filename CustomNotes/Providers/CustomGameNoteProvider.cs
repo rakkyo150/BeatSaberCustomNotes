@@ -1,13 +1,11 @@
 ﻿using System;
-using Zenject;
-using UnityEngine;
-using SiraUtil.Objects;
-using SiraUtil.Interfaces;
 using CustomNotes.Managers;
-using CustomNotes.Utilities;
 using CustomNotes.Settings.Utilities;
-using BS_Utils.Gameplay;
-using System.Collections.Generic;
+using CustomNotes.Utilities;
+using SiraUtil.Interfaces;
+using SiraUtil.Objects;
+using UnityEngine;
+using Zenject;
 
 namespace CustomNotes.Providers
 {
@@ -24,7 +22,7 @@ namespace CustomNotes.Providers
             public bool CanSetup { get; private set; }
 
             [Inject]
-            public void Construct(NoteAssetLoader _noteAssetLoader, DiContainer Container, GameplayCoreSceneSetupData sceneSetupData,PluginConfig pluginConfig )
+            public void Construct(NoteAssetLoader _noteAssetLoader, DiContainer Container, GameplayCoreSceneSetupData sceneSetupData, PluginConfig pluginConfig)
             {
                 CanSetup = !(sceneSetupData.gameplayModifiers.ghostNotes || sceneSetupData.gameplayModifiers.disappearingArrows) || !Container.HasBinding<MultiplayerLevelSceneSetupData>();
                 if (_noteAssetLoader.SelectedNote != 0)

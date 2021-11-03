@@ -1,8 +1,8 @@
 ﻿using System;
-using Zenject;
 using BeatSaberMarkupLanguage;
-using CustomNotes.Settings.UI;
 using BeatSaberMarkupLanguage.MenuButtons;
+using CustomNotes.Settings.UI;
+using Zenject;
 
 namespace CustomNotes.Managers
 {

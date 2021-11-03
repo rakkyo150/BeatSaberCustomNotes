@@ -1,6 +1,6 @@
-﻿using HMUI;
+﻿using BeatSaberMarkupLanguage;
+using HMUI;
 using Zenject;
-using BeatSaberMarkupLanguage;
 
 namespace CustomNotes.Settings.UI
 {

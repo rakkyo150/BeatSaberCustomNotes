@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+using System.Reflection;
+using CustomNotes.Overrides;
+using CustomNotes.Settings.Utilities;
 using UnityEngine;
 using Zenject;
-using CustomNotes.Settings.Utilities;
-using CustomNotes.Overrides;
-using System.Reflection;
-using System.IO;
 
 namespace CustomNotes.Managers
 {
@@ -30,7 +25,7 @@ namespace CustomNotes.Managers
         // https://virtualcast.jp/blog/2020/04/zenject_initialize_order_trap/
         // 初期化処理の実行順の問題？
         [Inject]
-        internal void Init(PluginConfig pluginConfig,IDifficultyBeatmap difficultyBeatmap)
+        internal void Init(PluginConfig pluginConfig, IDifficultyBeatmap difficultyBeatmap)
         {
             _pluginConfig = pluginConfig;
             _difficultyBeatmap = difficultyBeatmap;
@@ -39,7 +34,7 @@ namespace CustomNotes.Managers
             _customNoteColorNoteVisuals = GetComponent<CustomNoteColorNoteVisuals>();
 
             LoadShader();
-            mt= new Material(this.shader);
+            mt = new Material(this.shader);
 
             _gameNoteController.didInitEvent.Add(this);
             _gameNoteController.noteWasCutEvent.Add(this);
@@ -61,7 +56,7 @@ namespace CustomNotes.Managers
         }
 
         public void HandleNoteControllerDidInit(NoteControllerBase noteControllerBase)
-        {          
+        {
             switch (noteControllerBase.noteData.colorType)
             {
                 case ColorType.ColorA:
@@ -70,7 +65,7 @@ namespace CustomNotes.Managers
                     _trailRenderer.material = mt;
                     _trailRenderer.time = _trailTime;
                     _trailRenderer.widthMultiplier = _pluginConfig.TrailWidth;
-                    
+
                     break;
                 default:
                     break;
@@ -117,14 +112,14 @@ namespace CustomNotes.Managers
         {
             Assembly asm = Assembly.GetExecutingAssembly();
             // ResourcesにはシェーダそのものではなくUnityでAssetBundle化したものが必要
-            Stream st=asm.GetManifestResourceStream("CustomNotes.Resources.Shaders.sh_custom_unlit");
+            Stream st = asm.GetManifestResourceStream("CustomNotes.Resources.Shaders.sh_custom_unlit");
 
-           
+
 
             AssetBundle assetBundle = AssetBundle.LoadFromStream(st);
             this.shader = assetBundle.LoadAsset<Shader>("sh_custom_unlit");
             assetBundle.Unload(false);
-  
+
 
             if (this.shader == null)
             {

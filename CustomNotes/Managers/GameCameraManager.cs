@@ -1,7 +1,6 @@
-﻿using CustomNotes.Settings.Utilities;
+﻿using System;
+using CustomNotes.Settings.Utilities;
 using CustomNotes.Utilities;
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 

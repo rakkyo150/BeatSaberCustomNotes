@@ -1,17 +1,8 @@
-﻿using CustomNotes.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using BeatSaberMarkupLanguage.ViewControllers;
-using BeatSaberMarkupLanguage.FloatingScreen;
-using BeatSaberMarkupLanguage;
-using TMPro;
-using HMUI;
-using UnityEngine.UI;
+﻿using BeatSaberMarkupLanguage;
 using CustomNotes.Settings.Utilities;
+using HMUI;
+using TMPro;
+using UnityEngine;
 
 namespace CustomNotes.Utilities
 {
@@ -58,17 +49,17 @@ namespace CustomNotes.Utilities
         public static void SetCamera(Camera cam, CameraView view)
         {
             if (cam == null) return;
-            switch(view)
+            switch (view)
             {
                 default:
                 case CameraView.Default:
                 case CameraView.ThirdPerson:
-                    cam.cullingMask &= ~(1 << (int) NoteLayer.FirstPerson);
-                    cam.cullingMask |= 1 << (int) NoteLayer.ThirdPerson;
+                    cam.cullingMask &= ~(1 << (int)NoteLayer.FirstPerson);
+                    cam.cullingMask |= 1 << (int)NoteLayer.ThirdPerson;
                     break;
                 case CameraView.FirstPerson:
-                    cam.cullingMask &= ~(1 << (int) NoteLayer.ThirdPerson);
-                    cam.cullingMask |= 1 << (int) NoteLayer.FirstPerson;
+                    cam.cullingMask &= ~(1 << (int)NoteLayer.ThirdPerson);
+                    cam.cullingMask |= 1 << (int)NoteLayer.FirstPerson;
                     break;
             }
         }
@@ -128,7 +119,7 @@ namespace CustomNotes.Utilities
             _watermarkObject.SetActive(false);
             UnityEngine.Object.Destroy(_watermarkObject);
             _watermarkObject = null;
-        } 
+        }
 
         /// <summary>
         /// Force custom notes to only be visible in-headset, regardless of the player's settings.

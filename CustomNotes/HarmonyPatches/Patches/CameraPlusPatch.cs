@@ -1,8 +1,8 @@
-﻿using CustomNotes.Utilities;
+﻿using System;
+using System.Reflection;
+using CustomNotes.Utilities;
 using HarmonyLib;
 using IPA.Loader;
-using System;
-using System.Reflection;
 using UnityEngine;
 
 namespace CustomNotes.HarmonyPatches
@@ -14,9 +14,11 @@ namespace CustomNotes.HarmonyPatches
         {
             PluginMetadata cameraPlus = PluginManager.GetPluginFromId("CameraPlus");
             // Patch should only trigger if CameraPlus is installed and a pre-layerfix version
-            if (cameraPlus != null && cameraPlus.Assembly.GetName().Version <= new Version("4.7.2")) { 
+            if (cameraPlus != null && cameraPlus.Assembly.GetName().Version <= new Version("4.7.2"))
+            {
                 return cameraPlus.Assembly.GetType("CameraPlus.CameraPlusBehaviour").GetMethod("SetCullingMask", BindingFlags.Instance | BindingFlags.NonPublic);
-            } else return null;
+            }
+            else return null;
         }
 
         private static void Postfix(ref Camera ____cam)
