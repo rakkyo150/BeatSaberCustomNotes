@@ -2,6 +2,8 @@
 
 # BeatSaberCustomNotes + NoteTrail
 
+**今後これを更新することはない予定なので、代わりにhttps://github.com/Loloppe/BeatSaber_NoteCutGuide などがいいかもしれません**
+
 カスタムノーツにノーツトレイル機能を付与したMOD。<br>
 カスタムノーツのREADMEは[こちら](README_original)から。<br>
 なお、今後ノーツトレイルをカスタムノーツから分離させる可能性があります。
