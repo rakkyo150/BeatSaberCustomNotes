@@ -1,6 +1,8 @@
-## ‰pŒê”ÅREADME‚Í[‚±‚¿‚ç](README.md)
+## â€°pÅ’Ãªâ€Ã…READMEâ€šÃ[â€šÂ±â€šÂ¿â€šÃ§](README.md)
 
 # BeatSaberCustomNotes + NoteTrail
+
+**I will not be updating this in the future, so instead, https://github.com/Loloppe/BeatSaber_NoteCutGuide or something similar may be good.**
 
 A mod that gives Note Trail feature to Custom Notes.<br>
 The README for original Custom Notes can be found [here](README_original). <BR>
